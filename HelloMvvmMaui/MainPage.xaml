@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloMvvmMaui.MainPage"
+             Title="Exemplo de MVVM - Cumprimento usuário">
+    
+    <!-- o layout da página com espaçamento e prenchimento -->
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <!-- o rótulo com texto em negrito -->
+        
+        <Label Text="Digite seu nome" FontAttributes="Bold"/>
+        <!--Campo de entrada de texto que liga o biding ao Nome da ViewModel-->
+        
+        <Entry Placeholder="Ex.: Carla" Text="{Binding Nome}" />
+        
+        <!-- O Button chama o Command da ViewModel-->
+        <Button Text="Cumprimentar" Command="{Binding CumprimentarCommand}" />
+        
+        <!-- O Label exibe o resultado do biding Saudacao da ViewModel-->
+        <Label Text="{Binding Saudacao}" FontSize="20" FontAttributes="Bold"/>
+    </VerticalStackLayout>
+
+</ContentPage>
